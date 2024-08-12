@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<script>
+function mostrarMensaje() {
+    alert("¡Bienvenido a mi página!");
+}
+
+
+const formulario = document.getElementById('formularioContacto');
+
+
+formulario.addEventListener('submit', (event) => {
+    event.preventDefault(); 
+
+    
+
+    const nombre = document.getElementById('nombre').value;
+    const email = document.getElementById('email').value;
+    const mensaje = document.getElementById('mensaje').value;   
+
+
+    // Validar   
+ que todos los campos estén llenos
+    if (nombre === '' || email === '' || mensaje === '') {
+        alert('Por favor, completa todos los campos.');
+    } else {
+       
+        console.log('Nombre:', nombre);
+        console.log('Correo:', email);
+        console.log('Mensaje:', mensaje);
+        alert('¡Mensaje enviado correctamente!');
+    }
+});</script>
